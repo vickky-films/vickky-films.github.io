@@ -1,0 +1,293 @@
+/* General Styles */
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+::selection {
+    color: white;
+    background: #00979e;
+}
+
+/* Header */
+.homeheader {
+    height: 100vh;
+    background-image: url('assets/DSCF7010_dim.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding-top: 0;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition: top 0.8s;
+}
+
+.linkbox {
+    display: flex;
+    flex-direction: row;
+    padding: 3% 7% 0;
+}
+
+.title {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+}
+
+a.active {
+    color: #FF0000;
+}
+
+/* Hero Section */
+.h1container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%; /* Adjust this value to reduce space */
+}
+
+h1 {
+    color: white;
+    font-weight: 300;
+    font-size: 7.5vw;
+    line-height: 2em;
+    letter-spacing: 1vw;
+    margin: 0;
+}
+
+/* Social Links */
+.coversocial {
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+}
+
+.coverinstagram, .coverflickr {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    color: whitesmoke;
+    transition: color 0.3s;
+}
+
+.coverinstagram:hover, .coverflickr:hover {
+    color: #00979e;
+}
+
+/* Portfolio Section */
+.title_lines {
+    margin: 10% 0;
+    text-align: center;
+    position: relative;
+}
+
+.title_lines h2 {
+    font-size: 4vw;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: 1; /* Ensures the text stays above the lines */
+}
+
+.title_lines:before, .title_lines:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: #00979e;
+    z-index: 0; /* Places the lines behind the text */
+}
+
+.title_lines:before {
+    left: 0; /* Aligns the left line */
+}
+
+.title_lines:after {
+    right: 0; /* Aligns the right line */
+}
+.bio {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0; /* Reduced margin */
+    padding: 0 10%;
+    line-height: 1.6em;
+}
+
+.portfoliocontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+    grid-auto-rows: 200px; /* Define row height */
+    gap: 10px; /* Spacing between items */
+    padding: 0 5%; /* Reduced padding around the portfolio container */
+    margin-top: 20px; /* Slight spacing from the bio */
+}
+
+.portfolioimage {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Define specific grid item spans for a dynamic layout */
+.portfolioimage:nth-child(1) {
+    grid-column: span 3; /* Spans 3 columns */
+    grid-row: span 2; /* Spans 2 rows */
+}
+
+.portfolioimage:nth-child(2) {
+    grid-column: span 2; /* Spans 2 columns */
+    grid-row: span 1; /* Spans 1 row */
+}
+
+.portfolioimage:nth-child(3) {
+    grid-column: span 1; /* Spans 1 column */
+    grid-row: span 2; /* Spans 2 rows */
+}
+
+.portfolioimage:nth-child(4),
+.portfolioimage:nth-child(5) {
+    grid-column: span 3; /* Spans 3 columns */
+    grid-row: span 1; /* Spans 1 row */
+}
+
+.portfolioimage:nth-child(6) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.portfolioimage:nth-child(7),
+.portfolioimage:nth-child(8),
+.portfolioimage:nth-child(9),
+.portfolioimage:nth-child(10) {
+    grid-column: span 1; /* Spans 1 column */
+    grid-row: span 1; /* Spans 1 row */
+}
+
+.portfolioimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolioimage img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+/* Footer */
+footer {
+    margin-top: 15%;
+}
+
+#indexfooter {
+    margin-top: 0;
+}
+
+.widefooterlinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactfooter {
+    margin-right: 2.5%;
+}
+
+.contactfooter p {
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+.contactfooter a {
+    text-decoration: underline;
+    color: black;
+    transition: color 0.25s;
+}
+
+.contactfooter a:hover {
+    color: #00979e;
+}
+
+/* Social Footer */
+.socialcontainerfooter {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5%;
+}
+
+.coverinstagram2, .coverflickr2 {
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.8em;
+    color: black;
+    transition: color 0.25s;
+}
+
+.coverinstagram2:hover, .coverflickr2:hover {
+    color: #00979e;
+}
+
+/* Footer Layout */
+.containerfooter {
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.leftfooter, .rightfooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.75s;
+}
+
+.leftfooter:hover, .rightfooter:hover {
+    transform: scale(1.1);
+}
+
+.footertext {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 3.5vw;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+/* Media Queries */
+@media (max-width: 575.98px) {
+    .copyright {
+        font-size: 0.3em;
+    }
+
+    .portfoliocontainer {
+        column-count: 1;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .title_lines h2 {
+        font-size: 5vw;
+    }
+}
